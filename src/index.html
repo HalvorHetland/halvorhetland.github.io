@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timer.jquery/0.6.5/timer.jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script type="text/javascript" src="countimer-master/dist/ez.countimer.min.js"></script>
+    <style>
+        #container {
+            text-align: center;
+            align-items: center;
+        }
+
+        .timer {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        #div6 {
+            font-size: 50px;
+        }
+
+        .timer {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <input class="timer" type="text" value="" name="timer" />
+    <br>
+    <input id="btn1" type="button" class="btn btn-primary" value="Trykk på meg!" onclick="nesteknapp1()"/>
+    <h2 id="tekst1">Følg pilene og svar på spørsmålene!</h2>
+    <input id="btn3" type="button" class="btn btn-primary" value="Trykk her igjen!" onclick="nesteknapp3()"/>
+    <h2 id="tekst3">Scroll ned!</h2>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="pil1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+        </svg>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="div2">
+        <h1 id="sprm2p">Spørsmål 2</h1>
+        <form>
+            <p>Velg den grønne knappen</p>
+            <input class="btn btn-danger" type="button" id="rød" name="farge" value="Rød">
+            <label for="rød"></label><br><br>
+            <input class="btn btn-success" type="button" id="grønn" name="farge" value="Grønn" onclick="utFarge()">
+            <label for="grønn"></label><br><br>
+            <input class="btn btn-primary" type="button" id="blå" name="farge" value="Blå">
+            <label for="blå"></label><br>
+        </form><br>
+
+        <h2 id="utFarge">
+        </h2>
+        <div id="pil3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+            </svg>
+        </div>
+    </div>
+    <div id="div7">
+        <form>
+            <h1>Spørsmål 6</h1>
+            <h3>Likte du testen?</h3><br>
+        </form>
+        <button type="button" class="btn btn-success" onclick="utJa()">Selvfølgelig</button>
+        <div id="utJa"></div><br>
+        <div id="pil7">
+            <h2>Bla ned</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+            </svg>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="div5">
+        <form>
+            <h1>Stopp og trykk på knappen</h1><br>
+            <button type="button" class="btn btn-danger" onclick="utKnapp()">Jeg er en knapp</button>
+        </form>
+    </div><br>
+    <div id="utKnapp"></div>
+    <div id="pil4">
+        <h2>Bla ned</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+        </svg>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="div1" >
+        <h1>Spørsmål 1</h1>
+        <p><strong>Velg ditt favorittspråk og trykk på knappen under</strong></p>
+        <form class="btnRadio">
+            <div class="radio">
+                <label><input type="radio"  name="fav_language" value="HTML">HTML</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" id="css" name="fav_language" value="CSS">CSS</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" id="javascript" name="fav_language" value="Javascript">Javascript</label>
+            </div>
+            <button class="btn btn-info" type="button" onclick="utSpråk()">Trykk meg</button>
+        </form>
+    </div>
+    <div id="pil2">
+
+        <h2 id="utSpråk">
+        </h2><br>
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+        </svg>
+    </div>
+    <div id="div3">
+        <h1 id="sprm4">Spørsmål 4</h1>
+
+        <h3 id="sprm4igjen">Velg din favorittsjokolade</h3>
+        <div id="sjokolade">
+            <div>
+                <label for="freia">Freia</label><br>
+                <input type="image" id="freia"  alt="Freia" width="500px" height="160px"
+                       src="Freia1.png" onclick="utSjokolade()">
+            </div><br>
+            <div>
+                <label for="Nidar">Nidar</label><br>
+                <input type="image" id="Nidar" name="sjokolade" alt="Nidar" width="500px" height="150px"
+                       src="Nidar1.png" onclick="utSjokolade()">
+            </div><br>
+            <div>
+                <label for="Milka">Milka</label><br>
+                <input type="image" id="Milka" name="sjokolade" alt="Milka" width="500px" height="220px"
+                       src="Milka.png" onclick="utSjokolade()">
+            </div>
+        </div>
+        <h2 id="utSjokolade">
+        </h2>
+        <div id="pil8">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+            </svg>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="divTall">
+        <h1>Spørsmål 5</h1>
+
+        <form>
+            <p>Hva er 2 + 2?</p>
+            <input class="btn btn-secondary btn-lg button" type="button" id="4" name="tall" value=" 4 " onclick="utRiktig()">
+            <label for="4"></label><br><br>
+            <input class="btn btn-secondary btn-lg button" type="button" id="3" name="tall" value="3" onclick="utFeil()">
+            <label for="3"></label><br><br>
+            <input class="btn btn-secondary btn-lg button" type="button" id="6" name="tall" value="6" onclick="utFeil()">
+            <label for="6"></label><br>
+        </form><br>
+    </div>
+    <div id="pil6">
+        <h2 id="utTall">
+        </h2>
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+        </svg>
+    </div>
+    <div id="div6">
+        <h1>Spørsmål 3</h1>
+        <h3>Hvilket fag er best?</h3>
+        <form>
+            <div class="radio">
+                <label><input type="radio" id="MMI" name="fav_course" value="Norsk">Norsk</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" id="Menneske Maskin Interaksjon" name="fav_course" value="Matte">Matte</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" id="HCI" name="fav_course" value="Engelsk">Engelsk</label>
+            </div>
+            <button class="btn btn-info" type="button" onclick="utFag()">Trykk meg</button>
+        </form>
+
+    </div>
+    <div id="pil5">
+        <h2 id="utFag">
+        </h2><br>
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+        </svg>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="tekst4">
+        <h1>Takk for ditt bidrag til undersøkelsen!</h1>
+        <input type="button" class="button btn-primary" value="Start ny test!" onclick="startNy()"/>
+    </div>
+    <input id="btn4" type="button" class="btn btn-primary" value="Ferdig!" onclick="ferdig()"/>
+    <div id="utTid">
+        <input class="timer" type="text" value="" name="timer" />
+    </div>
+    <br>
+    <br>
+
+    <h2 id="tekst2">Scroll opp igjen!</h2>
+
+    <input id="btn2" type="button" class="btn btn-primary" value="Trykk her nå!" onclick="nesteknapp2()"/>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+
+<script>
+
+    function nesteside(){
+        const s1 = $("#id1").val();
+        const s2 = $("#id2").val();
+        const s3 = $("#id3").val();
+        const s4 = $("#id4").val();
+
+        $("#sprm1").html(s1);
+        $("#sprm2").html(s2);
+        $("#sprm3").html(s3);
+        $("#sprm4").html(s4);
+
+        window.location.href = "index2.html";
+    }
+
+    function utSpråk(){
+        let valg = document.getElementsByName('fav_language');
+        $("#div1").hide();
+        $("#tekst1").hide();
+
+        for (i = 0; i < valg.length; i++){
+            if (valg[i].checked)
+                document.getElementById('utSpråk').innerHTML = valg[i].value + " - Bla opp igjen!";
+            $("#pil2").show();
+            $("#pil1").hide();
+            $("#div2").show();
+
+        }
+    }
+
+    function utFarge() {
+        document.getElementById('utFarge').innerHTML = "Bla HELT ned";
+        $("#pil3").show();
+        $("#div1").hide();
+        $("#pil2").hide();
+        $("#div2 form").hide();
+        $("#btn2").show();
+        $("#sprm2p").hide();
+    }
+
+    function utSjokolade(){
+        document.getElementById('utSjokolade').innerHTML = "Bla videre";
+        $("#sjokolade").hide();
+        $("#utSjokolade").show();
+        $("#pil8").show();
+        $("#divTall").show();
+        $("#btn4").hide();
+        $("#sprm4").hide();
+        $("#sprm4igjen").hide();
+
+    }
+
+    function utRiktig(){
+        document.getElementById('utTall').innerHTML = "Riktig - bla opp";
+        $("#pil6").show();
+        $("#pil").hide();
+        $("#div3").hide();
+        $("#div7").show();
+        $("#divTall").hide();
+        $("#tekst3").hide();
+    }
+
+    function utFeil(){
+        document.getElementById('utTall').innerHTML = "Feil - Prøv et annet svar";
+    }
+
+    function utKnapp(){
+        $("#pil4").show();
+        //document.getElementById('utKnapp').innerHTML = "Følg pilen!";
+        $("#div6").show();
+        $("#div5").hide();
+
+    }
+
+    function utFag(){
+        let fag = document.getElementsByName('fav_course');
+        $("#div6").hide();
+
+        for (i = 0; i < fag.length; i++){
+            if (fag[i].checked)
+                document.getElementById('utFag').innerHTML = fag[i].value + " - Helt riktig! Bla opp igjen";
+            $("#pil5").show();
+            $("#pil4").hide();
+            $("#div5").hide();
+            $("#btn3").show();
+            $("#tekst2").hide();
+        }
+    }
+
+    function utJa(){
+        $("#pil7").show();
+        $("#div6").hide();
+        $("#pil5").hide();
+        $("#div4").hide();
+        $("#pil6").hide();
+        $("#div7 form").hide();
+        $("#div7 button").hide();
+        $("#btn4").show();
+    }
+
+
+    $("#tekst1").hide();
+    $("#tekst2").hide();
+    $("#btn3").hide();
+    $("#btn2").hide();
+    $("#btn4").hide();
+    $("#tekst3").hide();
+    $("#tekst4").hide();
+    $("#div3").hide();
+    $("#div4").hide();
+    $("#pil1").hide();
+    $("#pil2").hide();
+    $("#div2").hide();
+    $("#pil3").hide();
+    $("#div5").hide();
+    $("#pil4").hide();
+    $("#pil5").hide();
+    $("#pil6").hide();
+    $("#div7").hide();
+    $("#pil7").hide();
+    $("#pil8").hide();
+    $("#div1").hide();
+    $("#div6").hide();
+    $("#divTall").hide();
+    $("#utTid").hide();
+
+
+    function  nesteknapp1() {
+        $("#btn1").hide();
+        $("#tekst1").show();
+        $("#pil1").show();
+        $('.timer').countimer();
+        $("#div1").show();
+
+    }
+
+    function nesteknapp2(){
+        $("#btn2").hide();
+        $("#tekst2").show();
+        $("#tekst1").hide();
+        $("#btn3").show();
+        $("#div1").hide();
+        $("#div2").hide();
+        $("#div5").show();
+        $("#btn3").hide();
+    }
+
+    function nesteknapp3(){
+        $("#btn3").hide();
+        $("#tekst2").hide();
+        $("#tekst3").show();
+        $("#btn4").show();
+        $("#div3").show();
+        $("#div4").show();
+        $("#pil5").hide();
+        $("#div6").hide();
+
+    }
+    /*testene2*/
+
+    function ferdig(){
+        $("#tekst3").hide();
+        $("#tekst4").show();
+        $("#btn4").hide();
+        $("#div3").hide();
+        $("#div4").hide();
+        $('.timer').countimer('stop');
+        $("#utTid").show();
+    }
+
+    function startNy(){
+        window.location.href = "index.html";
+    }
+</script>
+</body>
+</html>
